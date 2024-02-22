@@ -1,0 +1,143 @@
+h1 {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: crimson;
+}
+
+.container {
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: 120px 100px;
+  grid-template-rows: 100px 100px 100px 100px;
+}
+
+.item {
+  border: 2px solid violet;
+  height: 55px;
+  width: 55px;
+}
+
+.item-4 {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+.item-1 {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+
+.container1 {
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: [pehla] 120px [doosra] 100px [tisra];
+  grid-template-rows: 100px 100px 100px 100px;
+}
+
+.item4 {
+  grid-row: 1/2;
+  grid-column: pehla/tisra;
+}
+
+/* Grid Template area property  */
+
+.container2 {
+  border: 2px solid black;
+  display: grid;
+  grid-template-areas:
+    "nav nav nav"
+    "side article article"
+    "footer footer footer";
+}
+.items {
+  border: 2px solid violet;
+  height: 55px;
+}
+
+.item_1 {
+  grid-area: nav;
+  background-color: aquamarine;
+}
+.item_2 {
+  grid-area: side;
+  background-color: cadetblue;
+}
+.item_3 {
+  grid-area: article;
+  background-color: darkkhaki;
+}
+
+.item_4 {
+  grid-area: footer;
+  background-color: darkolivegreen;
+}
+
+/* overlap */
+.item_5 {
+  grid-area: nav;
+  /* background-color: darkgray; */
+}
+
+.container3 {
+  width: 80vh;
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.itemss {
+  border: 2px solid orangered;
+  height: 55px;
+}
+
+.container4 {
+  width: 80vh;
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.container5 {
+  width: 80vh;
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 34px;
+}
+
+.container6 {
+  width: 80vh;
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 10px;
+  column-gap: 15px;
+}
+
+.container7 {
+  width: 80vh;
+  height: 60vh;
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  justify-items: center;
+  align-items: center;
+}
+
+.itm {
+  border: 2px solid violet;
+  height: 55px;
+  width: 55px;
+}
+
+.container8 {
+  width: 80vh;
+  height: 60vh;
+  border: 2px solid black;
+  display: grid;
+  /* grid-template-columns: repeat(4, minmax(100px, 1fr)); */
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(2, 80px);
+  justify-content: center;
+  align-content: center;
+}
